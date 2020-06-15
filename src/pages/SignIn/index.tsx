@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 import logo from '../../assets/logo.png';
 import getValidationErrors from '../../utils/getValidationErrors';
 import { useAuth } from '../../hooks/auth';
-import Intut from '../../components/Input';
+import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 import { Container, Title, ForgotPassword, ForgotPasswordText, CreateAccoutButton, CreateAccoutText } from './styles';
@@ -71,7 +71,7 @@ const SignIn: React.FC = () => {
             </View>
 
             <Form ref={formRef} onSubmit={handleSubmit}>
-              <Intut
+              <Input
                 autoCorrect={false}
                 autoCapitalize="none"
                 keyboardType="email-address"
@@ -82,7 +82,7 @@ const SignIn: React.FC = () => {
                 placeholder="E-mail"
               />
 
-              <Intut
+              <Input
                 secureTextEntry
                 returnKeyType="send"
                 onSubmitEditing={() => formRef.current?.submitForm()}

@@ -8,7 +8,7 @@ import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 
 import logo from '../../assets/logo.png';
-import Intut from '../../components/Input';
+import Input from '../../components/Input';
 import Button from '../../components/Button';
 import api from '../../services/api';
 import getValidationErrors from '../../utils/getValidationErrors';
@@ -20,7 +20,7 @@ interface FormData {
   password: string;
 }
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const passRef = useRef<TextInput>(null);
   const mailRef = useRef<TextInput>(null);
@@ -76,7 +76,7 @@ const SignIn: React.FC = () => {
             </View>
 
             <Form onSubmit={handleSubmit}>
-              <Intut
+              <Input
                 autoCapitalize="words"
                 returnKeyType="next"
                 onSubmitEditing={() => mailRef.current?.focus()}
@@ -85,7 +85,7 @@ const SignIn: React.FC = () => {
                 placeholder="Nome"
               />
 
-              <Intut
+              <Input
                 ref={mailRef}
                 keyboardType="email-address"
                 autoCorrect={false}
@@ -97,7 +97,7 @@ const SignIn: React.FC = () => {
                 placeholder="E-mail"
               />
 
-              <Intut
+              <Input
                 ref={passRef}
                 secureTextEntry
                 textContentType="newPassword"
@@ -126,4 +126,4 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
