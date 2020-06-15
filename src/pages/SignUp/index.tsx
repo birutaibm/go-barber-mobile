@@ -75,7 +75,7 @@ const SignUp: React.FC = () => {
               <Title>Crie sua conta</Title>
             </View>
 
-            <Form onSubmit={handleSubmit}>
+            <Form ref={formRef} onSubmit={handleSubmit}>
               <Input
                 autoCapitalize="words"
                 returnKeyType="next"
