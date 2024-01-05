@@ -17,7 +17,7 @@
     "@react-navigation/stack": "^5.14.9",
     "@unform/core": "^2.1.0",
     "@unform/mobile": "^2.1.6",
-    "axios": "^1.6.0",
+    "axios": "^1.6.4",
     "date-fns": "^2.25.0",
     "react": "16.14.0",
     "react-native": "0.68.0",
